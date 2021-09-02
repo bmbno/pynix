@@ -15,4 +15,5 @@ commands = {
     'cd': 'cd',
     'mkdir': 'md',
     'echo': 'echo',
+    'exit': 'exit'
 }
