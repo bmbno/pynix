@@ -1,8 +1,7 @@
+from .linux_commands.exit import Exit
 
-
-
-class Dos():
-    def __init__(self):
+class Dos:
+    def __init__(self, command):
         self.commands = {
             'ls': 'dir',
             'mv': 'ren',
@@ -18,5 +17,10 @@ class Dos():
             'cd': 'cd',
             'mkdir': 'md',
             'echo': 'echo',
-            'exit':'exit'
+            'exit':Exit()
         }
+        self.command = command
+    
+    def translate(self, command):
+        command_equiv = 0
+        return command_equiv

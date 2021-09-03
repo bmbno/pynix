@@ -1,5 +1,6 @@
 import platform
 import os
+from .dos import Dos
 
 
 def main():
@@ -8,16 +9,16 @@ def main():
 
     if _platform == "Windows":
         while EXIT == 0:
-            commands = input('$ ')
-            if (commands == 'exit'):
+            command = input('$ ')
+            if (command == 'exit'):
                 EXIT = 1
-            # terminal = new Dos()
+            terminal = Dos(command)
     else:
         while EXIT == 0:
-            commands = input('$ ')
-            if (commands == 'exit'):
+            command = input('$ ')
+            if (command == 'exit'):
                 EXIT = 1
-            os.system(commands)
+            os.system(command)
 
 
 if __name__ == '__main__':
