@@ -1,19 +1,24 @@
+import platform
 import os
 
-commands = {
-    'ls': 'dir',
-    'mv': 'ren',
-    'cp': 'copy',
-    'mv': 'move',
-    'clear': 'cls',
-    'rm': 'del',
-    'diff': 'fc',
-    'grep': 'find',
-    'man': '/?',
-    'pwd': 'chdir',
-    'date': 'time',
-    'cd': 'cd',
-    'mkdir': 'md',
-    'echo': 'echo',
-    'exit': 'exit'
-}
+
+def main():
+    EXIT = 0
+    _platform = platform.system()
+
+    if _platform == "Windows":
+        while EXIT == 0:
+            commands = input('$ ')
+            if (commands == 'exit'):
+                EXIT = 1
+            # terminal = new Dos()
+    else:
+        while EXIT == 0:
+            commands = input('$ ')
+            if (commands == 'exit'):
+                EXIT = 1
+            os.system(commands)
+
+
+if __name__ == '__main__':
+    main()
