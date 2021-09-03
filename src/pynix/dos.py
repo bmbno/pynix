@@ -1,4 +1,4 @@
-from linux_commands/exit import Exit
+
 
 
 class Dos():
@@ -18,4 +18,5 @@ class Dos():
             'cd': 'cd',
             'mkdir': 'md',
             'echo': 'echo',
-            'exit':}
+            'exit':'exit'
+        }
