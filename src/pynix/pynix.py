@@ -1,6 +1,6 @@
 import platform
 import os
-from .dos import Dos
+# from pynix.Dos import Dos
 
 
 def main():

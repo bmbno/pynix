@@ -1,4 +1,4 @@
-from .linux_commands.exit import Exit
+from pynix.linux_commands.exit import Exit
 
 class Dos:
     def __init__(self, command):
