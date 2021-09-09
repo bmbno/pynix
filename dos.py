@@ -1,4 +1,5 @@
-from pynix.linux_commands.exit import Exit
+from linux_commands.exit import Exit
+
 
 class Dos:
     def __init__(self, command):
@@ -17,10 +18,10 @@ class Dos:
             'cd': 'cd',
             'mkdir': 'md',
             'echo': 'echo',
-            'exit':Exit()
+            'exit': Exit()
         }
         self.command = command
-    
+
     def translate(self, command):
         command_equiv = 0
         return command_equiv

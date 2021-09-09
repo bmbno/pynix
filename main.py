@@ -1,6 +1,6 @@
 import platform
 import os
-# from pynix.Dos import Dos
+from dos import Dos
 
 
 def main():
@@ -13,6 +13,7 @@ def main():
             if (command == 'exit'):
                 EXIT = 1
             terminal = Dos(command)
+            os.system(terminal.translate())
     else:
         while EXIT == 0:
             command = input('$ ')
