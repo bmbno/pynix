@@ -6,14 +6,18 @@ from dos import Dos
 def main():
     EXIT = 0
     _platform = platform.system()
+    directory = os.path.expanduser("~")
 
     if _platform == "Windows":
         while EXIT == 0:
-            command = input('$ ')
-            if (command == 'exit'):
+            command = input(f'{directory} $ ')
+            if ('exit' in command):
+                terminal = Dos(command)
+                os.system(terminal.complete_translation())
                 EXIT = 1
+                break
             terminal = Dos(command)
-            os.system(terminal.translate())
+            os.system(terminal.complete_translation())
     else:
         while EXIT == 0:
             command = input('$ ')

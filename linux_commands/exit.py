@@ -1,9 +1,11 @@
 class Exit():
-    def translate(self, input):
-        commands = input.split()
-        if len(commands) == 1:
-            return "exit"
-        elif len(commands == 2 and type(commands[1]) == int):
-            return f"{commands[0]} /B {commands[1]}"
-        else:
-            return 0
+    def translate(self, command):
+        commands = command.split()
+        command_key = commands[0]
+        try:
+            code = int(commands[1])
+            return f"{command_key} /B {code}"
+        except:
+            if len(commands) == 1:
+                return command
+            return "echo 'ERROR: code must be a number'"
